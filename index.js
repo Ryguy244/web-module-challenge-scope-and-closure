@@ -27,11 +27,13 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ * Counter1 does not use closure while counter2 does. Counter1 runs a function within a function too.
  * 
  * 2. Which of the two uses a closure? How can you tell?
+ * Counter2 uses a closure because you can see that it has to pull count from outside the function in order to run.
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ * Counter1 would be better for something that was not cumulative. It will not track the score over multiple iterations of counterMaker(). Counter2 could keep track of a game through multiple iterations of the function.
 */
 
 // counter1 code
@@ -51,16 +53,16 @@ function counter2() {
   return count++;
 }
 
-
 /* Task 2: inning() 
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(){
 
-    /*Code Here*/
-
+let runs = Math.floor(Math.random() * 3);
+return runs;
 }
+console.log(inning());
 
 /* Task 3: finalScore()
 
@@ -76,10 +78,16 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(inning, numIn){
+  let sum = 0;
+  for (i = 0; i = numIn; i++) {
+    inning();
+  }
+  console.log(finalScore(inning, 9))
+// let hScore = homers
+// let aScore = 
 
-  /*Code Here*/
-
+// return `Home: `
 }
 
 /* Task 4: 
