@@ -127,26 +127,20 @@ function scoreboard(inning, numIn) {
  let homeScores = (scoreboard(inning, 9));
  let awayScores = (scoreboard(inning, 9));
 
- console.log(homeScores);
- console.log(awayScores);
- console.log(homeScores[0]);
+//  console.log(homeScores);
+//  console.log(awayScores);
+//  console.log(homeScores[0]);
 
  function scoreByInning(inning, numIn, homeScores, awayScores){
+   let result = '';
   for (i = 1; i<= numIn; i++) {
-    
+    result += `Inning ${i}: ${homeScores[i]} - ${awayScores[i]} 
+`
   }
+  return result;
  }
-  
+   console.log(scoreByInning(inning, 8, homeScores, awayScores))
 
-// console.log(scoreboard(inning, 9));
-// function finalScore(inning, numIn) { 
-//   let score = 0;
+  //  why doesn't 9 work??
 
-//   for (i = 0; i <= numIn; i++) {
-//     score += inning();
-//   } 
-//   return score;
-// }
 
-// let homeTeam = (finalScore(inning, 9));
-// let awayTeam = (finalScore(inning, 9));

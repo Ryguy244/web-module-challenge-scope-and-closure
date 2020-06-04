@@ -42,6 +42,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+A closure is a function nested within another function that can access its outer function's variables.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,6 +64,7 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+The closure occurs through personalDice() and the anonymous function. Even though the anon function does not need to call any variables from outside it's local scope, it still could because closure is declared upon creation of a function.
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
 c. What is the lexical scope of `newRoll`? 
 
